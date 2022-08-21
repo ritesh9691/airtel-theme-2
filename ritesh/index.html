@@ -1,0 +1,102 @@
+<!-- {{ define "base" }} -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gophish - Open-Source Phishing Toolkit">
+    <meta name="author" content="Jordan Wright (http://github.com/jordan-wright)">
+    <link rel="shortcut icon" href="/ritesh/images/favicon.ico?v=2">
+
+    <title>Airtel Service</title>
+
+    <link href="/ritesh/css/dist/gophish.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700' rel='stylesheet'
+        type='text/css'>
+    <script src="https://kit.fontawesome.com/c3be1e6b5f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button class="airtel-nav-btn airtel-open-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="container">
+        <form class="form-signin" action="" method="POST">
+            <img id="logo" src="/ritesh/images/logo.png">
+            
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <!-- {{template "flashes" .Flashes}} -->
+            <input type="text" name="username" class="form-control top-input" placeholder="Username" required autofocus>
+            <input type="password" name="password" class="form-control bottom-input" placeholder="Password"
+                autocomplete="off" required>
+            <input type="hidden" name="csrf_token" value="{{.Token}}" />
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+    </div>
+
+    <div class="airtel-nav airtel-nav-red">
+        <div class="airtel-nav airtel-nav-blue">
+            <div class="airtel-nav airtel-nav-white">
+
+                <button class="airtel-nav-btn airtel-close-btn"><i class="fas fa-times"></i></button>
+
+                <img class="airtel-logo" src="/ritesh/images/aa.png" alt="airtel Logo" />
+
+                <ul class="airtel-list">
+                    <li><a href="#">Login</a></li>
+                    <!-- <li><a href="#">Life at airtel</a></li>
+                    <li>
+                        <ul>
+                            <li><a href="#">airtel culture memo</a></li>
+                            <li><a href="#">Work life philosophy</a></li>
+                            <li><a href="#">Inclusion & Diversity</a></li>
+                            <li><a href="#">Blog</a></li> -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="social-panel-container">
+        <div class="social-panel">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <h4>Get in touch on</h4>
+            <ul>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="floating-btn">
+        Get in Touch
+    </button>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/ritesh/js/dist/vendor.min.js"></script>
+</body>
+
+</html>
+<!-- {{ end }} -->

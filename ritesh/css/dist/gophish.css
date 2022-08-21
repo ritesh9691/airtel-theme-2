@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: 'Muli';
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.airtel-nav-btn {
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+	font-size: 25px;
+    color: whitesmoke;
+}
+
+.airtel-open-btn {
+	position: fixed;
+	top: 12px;
+	left: 12px;
+}
+
+.airtel-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	transform: translateX(-100%);
+	transition: transform .3s ease-in-out; 
+}
+
+.airtel-nav.visible {
+	transform: translateX(0);
+}
+
+.airtel-nav-red {
+	background-color: rgb(216, 33, 33);
+	width: 60%;
+	max-width: 450px;
+	min-width: 375px;
+	transition-delay: .4s;
+}
+
+.airtel-nav-red.visible {
+	transition-delay: 0s;
+}
+
+.airtel-nav-blue {
+	background-color: rgb(58, 51, 122);
+	transition-delay: .2s; 
+	width: 95%;
+}
+
+.airtel-nav-blue.visible {
+	transition-delay: .2s;
+}
+
+.airtel-nav-white {
+	background-color: rgba(0, 0, 0, 0.850);
+	padding: 40px;
+	position: relative;
+	transition-delay: 0s; 
+	width: 95%;
+}
+
+.airtel-nav-white.visible {
+	transition-delay: .4s;
+}
+
+.airtel-close-btn {
+	opacity: 0.3;
+	position: absolute;
+	top: 40px;
+	right: 30px;
+    color: white;
+}
+
+.airtel-logo {
+	width: 150px;
+}
+
+.airtel-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.airtel-list li {
+	margin: 20px 0;
+}
+
+.airtel-list li a {
+	color: white;
+	font-size: 20px;
+	
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.airtel-list ul {
+	list-style-type: none;
+	padding-left: 20px;
+}
+
+/* Form Styles */
+.container {
+    background: linear-gradient(
+        rgba(255, 0, 0, 0.39),
+        rgba(4, 0, 255, 0.39)
+      ),
+      url(/ritesh/images/bg.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+#logo {
+    max-height: 350px;
+    max-width: 300px;
+}
+
+.container form {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container form h2 {
+    text-align: center;
+	margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: floralwhite;
+}
+
+.container form input {
+    margin-top: 9px;
+    padding: 8px 15px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.container form button {
+    margin-top: 10px;
+    background-color: rgb(250, 70, 39);
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.container form button:hover {
+    background-color: rgb(250, 53, 18);
+}
+
+/* Social Panel Styles */
+.social-panel-container {
+	position: fixed;
+	right: 0;
+	bottom: 80px;
+	transform: translateX(100%);
+	transition: transform 0.4s ease-in-out;
+}
+
+.social-panel-container.visible {
+	transform: translateX(-10px);
+}
+
+.social-panel {	
+	border-radius: 16px;
+	box-shadow: 0 16px 31px -17px rgba(255, 255, 255, 0.5)smoke;
+	border: 2px solid whitesmoke;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli';
+	position: relative;
+	height: 139px;	
+	width: 370px;
+	max-width: calc(100% - 10px);
+}
+
+.social-panel button.close-btn {
+	border: 0;
+	color: white;
+	background-color: transparent;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+
+.social-panel button.close-btn:focus {
+	outline: none;
+}
+
+.social-panel h4 {
+	margin: 20px 0;
+	color: whitesmoke;	
+	font-family: 'Muli';	
+	font-size: 14px;	
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.social-panel ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-panel ul li {
+	margin: 0 10px;
+}
+
+.social-panel ul li a {
+	border: 1px solid #DCE1F2;
+	border-radius: 50%;
+	color: whitesmoke;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	text-decoration: none;
+}
+
+.social-panel ul li a:hover {
+	border-color: red;
+	box-shadow: 0 9px 12px -9px rgb(201, 45, 45);
+}
+
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #002e92;
+	border: 1px solid #001F61;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+}
+
+.floating-btn:hover {
+	background-color: rgb(223, 31, 31);
+}
+
+.floating-btn:focus {
+	outline: none;
+}
+
+@media screen and (max-width: 480px) {
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+}
